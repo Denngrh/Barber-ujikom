@@ -55,6 +55,272 @@
     </section>
     <!-- Banner End -->
 
+              <!-- Service-->
+    <span id='service'></span>
+    <section class="popular-barber bg-theme pt-2 pb-2 mt-5">
+      <div class="container">
+        <div class="row">
+          <h3 class="fw-bold ms-3" >
+           Daftar
+            <span class="text-theme">Layanan</span>
+          </h3>
+          <hr>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4 mt-3">
+            <div class="card border-radius-10 p2">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/buzz-cut.jpg"
+                      width="100"
+                      class="border-radius-10 img-fluid"
+                      alt="buzz cut"
+                    />
+                  </div>
+                  <div class="col-md-8 mt-2">
+                    <a  class="text-decoration-none text-dark">
+                      <h5 class="ms-2 fw-bold">Buzz Cut</h5>
+                    </a>
+                    <small class="ms-2 fw-bold text-theme">Pelanggan</small>
+                    <br />
+                    <small class="text-muted ms-2"
+                      ><i data-feather="map-pin" width="16px"></i>Katapang,
+                      Bandung</small
+                    >
+                  </div>
+                </div>
+                <h5 class="fw-bold ms-2 mt-4">Paket Basic</h5>
+                <div class="row">
+                  <span
+                    class="badge badge-muted bg-secondary block-badge p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20px"></i>Men's
+                    Haricut</span
+                  >
+                  <span
+                    class="badge badge-muted bg-secondary p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20"></i>Kid's
+                    Haricut</span
+                  >
+                  
+                </div>
+                <h5 class="font-weight-bold price-theme mt-4">Rp. 20.000</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3">
+            <div class="card border-radius-10 p2">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/two-block.jpg"
+                      width="100"
+                      class="border-radius-10 img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-md-8 mt-2">
+                    <a  class="text-decoration-none text-dark">
+                      <h5 class="ms-2 fw-bold">Two block</h5>
+                    </a>
+                    <small class="ms-2 fw-bold text-theme">Pelanggan</small>
+                    <br />
+                    <small class="text-muted ms-2"
+                      ><i data-feather="map-pin" width="16px"></i>Katapang,
+                      Bandung</small
+                    >
+                  </div>
+                </div>
+                <h5 class="fw-bold ms-2 mt-4">Paket Basic</h5>
+                <div class="row">
+                  <span
+                    class="badge badge-muted bg-secondary block-badge p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20px"></i>Men's
+                    Haricut</span
+                  >
+                  <span
+                    class="badge badge-muted bg-secondary p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20"></i>Kid's
+                    Haricut</span
+                  >
+                </div>
+                <h5 class="font-weight-bold price-theme mt-4">Rp. 20.000</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3">
+            <div class="card border-radius-10 p2">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/mid-fade.jfif"
+                      width="100"
+                      class="border-radius-10 img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-md-8 mt-2">
+                    <a  class="text-decoration-none text-dark">
+                      <h5 class="ms-2 fw-bold">Mid Fade</h5>
+                    </a>
+                    <small class="ms-2 fw-bold text-theme">Pelanggan</small>
+                    <br />
+                    <small class="text-muted ms-2"
+                      ><i data-feather="map-pin" width="16px"></i>Katapang,
+                      Bandung</small
+                    >
+                  </div>
+                </div>
+                <h5 class="fw-bold ms-2 mt-4">Paket Basic</h5>
+                <div class="row">
+                  <span
+                    class="badge badge-muted bg-secondary block-badge p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20px"></i>Men's
+                    Haricut</span
+                  >
+                  <span
+                    class="badge badge-muted bg-secondary p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20"></i>Kid's
+                    Haricut</span
+                  >
+                </div>
+                <h5 class="font-weight-bold price-theme mt-4">Rp. 20.000</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3">
+            <div class="card border-radius-10 p2">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/taper-fade.jfif"
+                      width="100"
+                      class="border-radius-10 img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-md-8 mt-2">
+                    <a  class="text-decoration-none text-dark">
+                      <h5 class="ms-2 fw-bold">Taper fade</h5>
+                    </a>
+                    <small class="ms-2 fw-bold text-theme">Pelanggan</small>
+                    <br />
+                    <small class="text-muted ms-2"
+                      ><i data-feather="map-pin" width="16px"></i>Katapang,
+                      Bandung</small
+                    >
+                  </div>
+                </div>
+                <h5 class="fw-bold ms-2 mt-4">Paket Basic</h5>
+                <div class="row">
+                  <span
+                    class="badge badge-muted bg-secondary block-badge p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20px"></i>Men's
+                    Haricut</span
+                  >
+                  <span
+                    class="badge badge-muted bg-secondary p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20"></i>Kid's
+                    Haricut</span
+                  >  
+                </div>
+                <h5 class="font-weight-bold price-theme mt-4">Rp. 20.000</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3">
+            <div class="card border-radius-10 p2">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/low-fade.webp"
+                      width="100"
+                      class="border-radius-10 img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-md-8 mt-2">
+                    <a  class="text-decoration-none text-dark">
+                      <h5 class="ms-2 fw-bold">Low fade</h5>
+                    </a>
+                    <small class="ms-2 fw-bold text-theme">Pelanggan</small>
+                    <br />
+                    <small class="text-muted ms-2"
+                      ><i data-feather="map-pin" width="16px"></i>Katapang,
+                      Bandung</small
+                    >
+                  </div>
+                </div>
+                <h5 class="fw-bold ms-2 mt-4">Paket Basic</h5>
+                <div class="row">
+                  <span
+                    class="badge badge-muted bg-secondary block-badge p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20px"></i>Men's
+                    Haricut</span
+                  >
+                  <span
+                    class="badge badge-muted bg-secondary p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20"></i>Kid's
+                    Haricut</span
+                  >
+                </div>
+                <h5 class="font-weight-bold price-theme mt-4">Rp. 20.000</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3">
+            <div class="card border-radius-10 p2">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/french-crop.jfif"
+                      width="100"
+                      class="border-radius-10 img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-md-8 mt-2">
+                    <a  class="text-decoration-none text-dark">
+                      <h5 class="ms-2 fw-bold">french crop</h5>
+                    </a>
+                    <small class="ms-2 fw-bold text-theme">Pelanggan</small>
+                    <br />
+                    <small class="text-muted ms-2"
+                      ><i data-feather="map-pin" width="16px"></i>Katapang,
+                      Bandung</small
+                    >
+                  </div>
+                </div>
+                <h5 class="fw-bold ms-2 mt-4">Paket Basic</h5>
+                <div class="row">
+                  <span
+                    class="badge badge-muted bg-secondary block-badge p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20px"></i>Men's
+                    Haricut</span
+                  >
+                  <span
+                    class="badge badge-muted bg-secondary p-2 ps-1 ms-2 pe-1 mt-2"
+                    ><i data-feather="scissors" width="20"></i>Kid's
+                    Haricut</span
+                  >  
+                </div>
+                <h5 class="font-weight-bold price-theme mt-4">Rp. 20.000</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- Service End -->
+    
+    
         <!-- Footer -->
         <?php include'inc/footer.php'; ?>
         <!-- Footer end -->
