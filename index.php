@@ -353,6 +353,76 @@
           </div>
           <!-- Contact End -->
 
+           <!-- FAQ Start -->
+           <span id='faq'></span>
+          <div class="row ">
+            <div class="col-md-6 mt-5">
+                <h1 class="fw-bold mt-5">Pertanyaan yang Sering Diajukan
+                  <span class="text-theme">(F.A.Q)</span>
+                </h1>
+                <hr>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingNol">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNol" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <p>
+                          Berapa harga potongan rambut di Lily Putra?
+                        </p>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseNol" class="accordion-collapse collapse" aria-labelledby="flush-headingNol" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Harga potongan bervariasi tergantung jenis potongan yag diinginkan.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <p>
+                       Apakah disini ada mencuci rambut?
+                        </p>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Lily Putra barbershop cenderung tidak melakukan itu, jadi jika rambut Anda telah selesai anda bisa langsung pulang.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <p>
+                          Apakah kita bisa langsung ketempat tanpa booking?
+                        </p>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Tentu saja Lily putra barbershop bisa langsung ke tempat tanpa harus booking, tetapi cenderung menunggu dengan yang lain,untuk efisiensi waktu sebaiknya booking terlebih dahulu.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <p>
+                      Apa yang harus dilakukan jika tidak puas dengan hasil potongan rambut?
+                    </p>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Sebaiknya langsung berbicara dengan penata rambut untuk memperbaiki potongan rambut dan mencari solusi yang memuaskan kedua belah pihak.</div>
+                    </div>
+                  </div>
+                </div>
+                <a
+              href="https://scribehow.com/shared/Cara_Menavigasi_Situs_Web_untuk_Lily_Putra_Barbershop__xN6gZKy8T0ucjvPY35BXDQ"
+              class="btn btn-outline-theme pe-4 ps-4 pt-2 mt-3"
+              >Panduan pengguna
+            </a>
+            </div>
+            <div class="col-md-6">
+              <img src="assets/img/aboutBarber 2.svg" width="600px" class="img-fluid"alt="About Image">
+            </div>
+          </div>
+          <!-- FAQ End -->
+
         <!-- Footer -->
         <?php include'inc/footer.php'; ?>
         <!-- Footer end -->

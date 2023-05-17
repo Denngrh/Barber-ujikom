@@ -42,6 +42,13 @@
               <a
                 href="#faq"
                 class="nav-link btn btn-outline-theme ps-3 pe-3"
+                >FAQ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#location"
+                class="nav-link btn btn-outline-theme ps-3 pe-3"
                 >home</a
               >
             </li>
