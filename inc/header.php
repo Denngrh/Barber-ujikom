@@ -49,7 +49,21 @@
               <a
                 href="#location"
                 class="nav-link btn btn-outline-theme ps-3 pe-3"
-                >home</a
+                >Lokasi</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#about"
+                class="nav-link btn btn-outline-theme ps-3 pe-3"
+                >Tentang kami</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="./login.php"
+                class="nav-link btn btn-outline-theme ps-3 pe-3"
+                >Admin</a
               >
             </li>
           </div>

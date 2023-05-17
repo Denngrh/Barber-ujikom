@@ -423,6 +423,28 @@
           </div>
           <!-- FAQ End -->
 
+          <!-- Location  -->
+          <span id='location'></span>
+          <div class="row mt-5">
+          <div class="col-md-6">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15840.538387538305!2d107.5372209!3d-6.9934244!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68ef1c571f5ef5%3A0xd6b172403204b82!2sPangkas%20Rambut%20Lily%20putra!5e0!3m2!1sid!2sid!4v1682928028169!5m2!1sid!2sid" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="col-md-6">
+            <h2 class="fw-bold">
+             Lokasi
+              <span class="text-theme">Barber</span>
+            </h2>
+            <hr>
+            <div class="map-content-9 mt-lg-0 mt-4">
+            <p class="text-muted">lily putra barbershop belum membuka cabang yang lain hanya terdapat di lokasi tersebut yang bisa anda datangi. </p>
+                </div>
+            </div>
+          </div>
+            <!-- Location  End -->
+        </div>
+      </div>
+    </section>
+
         <!-- Footer -->
         <?php include'inc/footer.php'; ?>
         <!-- Footer end -->
