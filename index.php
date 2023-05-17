@@ -103,7 +103,6 @@
                     ><i data-feather="scissors" width="20"></i>Kid's
                     Haricut</span
                   >
-                  
                 </div>
                 <h5 class="font-weight-bold price-theme mt-4">Rp. 20.000</h5>
               </div>
@@ -353,7 +352,7 @@
             </div>
           </div>
           <!-- Contact End -->
-          
+
         <!-- Footer -->
         <?php include'inc/footer.php'; ?>
         <!-- Footer end -->
