@@ -320,7 +320,40 @@
     </section>
     <!-- Service End -->
     
-    
+     <!-- Contact Start -->
+     <span id='contact'></span>
+    <section class="about mt-5 pd-5" id="contact">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <img src="assets/img/aboutBarber.svg" width="500px" class="img-fluid" alt="contact Image" />
+          </div>
+          <div class="col-md-6">
+            <h2 class="fw-bold">
+             Kontak
+            </h2>
+            <hr>
+            <div class="map-content-9 mt-lg-0 mt-4">
+                    <form action="proses/proses.php"method="post">
+                    <?php if (isset($_GET['info'])) { ?>
+                    <div class="alert alert-success text-center" role="alert">
+                    <?= $_GET['info'] ?>
+                    </div>
+                    <?php } ?>
+                        <div class="twice-two">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Nama Lengkap" required autocomplete="off"><br>
+                        </div>
+                        <div class="twice-two">
+                            <input type="email" class="form-control" class="form-control" placeholder="Email" required name="email"><br>
+                        </div>
+                        <textarea class="form-control" id="pesan" name="pesan" placeholder="Pesan" required=""></textarea>
+                        <button type="submit" class="btn btn-outline-theme pe-4 ps-4 pt-2 mt-3" name="submit">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+          </div>
+          <!-- Contact End -->
+          
         <!-- Footer -->
         <?php include'inc/footer.php'; ?>
         <!-- Footer end -->
