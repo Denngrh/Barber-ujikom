@@ -12,23 +12,20 @@ if(isset($_POST['submit']))
     $cost=$_POST['cost'];
    $image=$_POST['image'];
 $image=$_FILES["image"]["name"];
-// get the image extension
 $extension = substr($image,strlen($image)-4,strlen($image));
-// allowed extensions
 $allowed_extensions = array(".jpg","jpeg",".png",".gif");
-// Validation for allowed extensions .in_array() function searches an array for a specific value.
 if(!in_array($extension,$allowed_extensions))
 {
 echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
 }
 else
 {
-//rename the image file
+//enkripsi nama gambar
 $newimage=md5($image).time().$extension;
-// Code for move image into directory
+// menyimpan di folder img
 move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage);
      
-    $query=mysqli_query($conn, "insert into  tblservices(ServiceName,ServiceDescription,Cost,Image) value('$sername','$serdesc','$cost','$newimage')");
+    $query=mysqli_query($conn, "INSERT INTO  tblservices(ServiceName,ServiceDescription,Cost,Image) value('$sername','$serdesc','$cost','$newimage')");
     if ($query) {
     	echo "<script>alert('Service has been added.');</script>"; 
     		echo "<script>window.location.href = 'manage-service.php'</script>";      
