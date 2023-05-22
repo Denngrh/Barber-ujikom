@@ -23,17 +23,15 @@ else
 //enkripsi nama gambar
 $newimage=md5($image).time().$extension;
 // menyimpan di folder img
-move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage);
-     
+move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage); 
     $query=mysqli_query($conn, "INSERT INTO  tblservices(ServiceName,ServiceDescription,Cost,Image) value('$sername','$serdesc','$cost','$newimage')");
     if ($query) {
-    	echo "<script>alert('Service has been added.');</script>"; 
-    		echo "<script>window.location.href = 'manage-service.php'</script>";      
+      header("Location: add-service.php?info=berhasil menambahkan");
   }
   else
     {
-    echo "<script>alert('Something Went Wrong. Please try again.');</script>";  	
-    }
+      header("Location: add-service.php?info=Something Went Wrong. Please try again.");	
+     }
 }
 }
     ?>
@@ -232,6 +230,11 @@ move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage);
       <div class="row">
         <div class="col-lg-6">
         <form method="post" enctype="multipart/form-data">
+        <?php if (isset($_GET['info'])) { ?>
+                    <div class="alert alert-primary text-center" role="alert">
+                    <?= $_GET['info'] ?>
+                    </div>
+                    <?php } ?>
 							 <div class="form-group"> <label for="exampleInputEmail1">Service Name</label> <input type="text" class="form-control mt-1" id="sername" name="sername" placeholder="Service Name" value="" required="true"> </div>
 							 <div class="form-group mt-2"> <label for="exampleInputEmail1">Service Description</label> <textarea type="text" class="form-control mt-1" id="sername" name="serdesc" placeholder="Service Name" value="" required="true"></textarea> </div>
 							  <div class="form-group mt-2"> <label for="exampleInputPassword1">Cost</label> <input type="text" id="cost" name="cost" class="form-control mt-1" placeholder="Cost" value="" required="true"> </div>
