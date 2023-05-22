@@ -4,8 +4,13 @@
         <div class="row">
           <div class="col-md-5 ">
           <span id='about'></span>
-            <img src="./assets/img/logo.png" width="38" alt="Logo barber"> <span class="fw-bold">about</span>
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, reiciendis.</p>
+          <?php
+          $ret=mysqli_query($conn,"select * from tblpage where PageType='aboutus' ");
+          $cnt=1;
+          while ($row=mysqli_fetch_array($ret)) {
+          ?>
+            <img src="./assets/img/logo.png" width="38" alt="Logo barber"> <span class="fw-bold"><?php  echo $row['PageTitle'];?></span>
+            <p class="text-muted"><?php  echo $row['PageDescription'];?></p><?php } ?>
           </div>
           <div class="col-md-2 mb-3">
             <h6 class="fw-bold">tautan langsung</h6>
