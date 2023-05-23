@@ -129,7 +129,7 @@ include('inc/koneksi.php');
             </h2>
             <hr>
             <div class="map-content-9 mt-lg-0 mt-4">
-                    <form action="proses/proses.php"method="post">
+                    <form action="proses/prosess.php"method="post">
                     <?php if (isset($_GET['info'])) { ?>
                     <div class="alert alert-success text-center" role="alert">
                     <?= $_GET['info'] ?>
