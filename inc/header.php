@@ -62,7 +62,7 @@
             <li class="nav-item">
               <a
                 href="./login.php"
-                class="nav-link btn btn-outline-theme ps-3 pe-3"
+                class="nav-link btn btn-color-theme ps-3 pe-3"
                 >Admin</a
               >
             </li>

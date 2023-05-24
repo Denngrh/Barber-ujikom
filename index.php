@@ -135,13 +135,15 @@ include('inc/koneksi.php');
                     <?= $_GET['info'] ?>
                     </div>
                     <?php } ?>
-                        <div class="twice-two">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Nama Lengkap" required autocomplete="off"><br>
+                        <div class="row">
+                        <div class="twice-two col-6">
+                            <input type="text" class="form-control" style="height: 50px;" name="name" id="name" placeholder="Nama Lengkap" required autocomplete="off"><br>
                         </div>
-                        <div class="twice-two">
-                            <input type="email" class="form-control" class="form-control" placeholder="Email" required name="email"><br>
+                        <div class="twice-two col-6">
+                            <input type="email" class="form-control" style="height: 50px;" class="form-control" placeholder="Email" required name="email"><br>
                         </div>
-                        <textarea class="form-control" id="pesan" name="pesan" placeholder="Pesan" required=""></textarea>
+                        </div>
+                        <textarea class="form-control message"  style="height: 138px;" id="pesan" name="pesan" maxlength="500" placeholder="Pesan" required=""></textarea>
                         <button type="submit" class="btn btn-outline-theme pe-4 ps-4 pt-2 mt-3" name="submit">Kirim Pesan</button>
                     </form>
                 </div>

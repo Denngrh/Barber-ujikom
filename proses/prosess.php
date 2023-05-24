@@ -11,7 +11,7 @@
   //sesuaikan name dengan di form nya ya 
   $name = $_POST['name'];
   $email = $_POST['email'];
-  $pesan = $_POST['pesan'];
+  $pesan = htmlspecialchars($_POST['pesan']);
 
         $mail = new PHPMailer;
         $mail->isSMTP();
