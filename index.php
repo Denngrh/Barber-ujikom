@@ -46,6 +46,16 @@ include('inc/koneksi.php');
               <div id="typing">Tampan dan Rapi</div>
              <div id="line">|</div>
             </p>
+            <a
+              href=""
+              class="btn btn-color-theme pe-4 ps-4 pt-2 mt-3"
+              >Explore Now</a
+            >
+            <a
+              href="user/login.php"
+              class="btn btn-outline-theme pe-4 ps-4 pt-2 mt-3"
+              >Get Appointment
+            </a>
           </div>
           <div class="col-md-6 mt-2">
             <img
