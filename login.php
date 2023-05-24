@@ -39,45 +39,83 @@
     />
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="shorcut icon" type="image/png" href="assets/img/logo.png" />
-    <script src="assets/sciript.js" defer></script>
+    <link rel="shorcut icon" type="image/png" href="./assets/img/logo.png" />
+    <script src="./assets/sciript.js" defer></script>
     <title>Admin Area</title>
 </head>
 <body>
  <!-- Login Start -->
-    <section class="about mt-5 pd-5">
-      <div class="container">
-        <div class="row mt-5">
-          <div class="col-md-12 offset-md-3">
-            <img src="assets/img/login.svg" width="500px" class="img-fluid" alt="contact Image" />
-          </div>
-          <div class="col-md-6 offset-md-3 mt-2">
-            <h2 class="fw-bold text-center" >
-              Admin
-              <span class="text-theme">Area</span>
-            </h2>
-            <hr>
-            <div class="map-content-9 mt-lg-0 mt-10">
-                    <form method="post">
-                    <?php if (isset($_GET['info'])) { ?>
+ <div class="container">
+      <div class="row">
+        <div class="mx-auto mt-5 text-center">
+          <img src="assets/img/logo.png" width="8%" alt="Logo Barber" />
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-7 mt-3">
+          <img
+            class="img-fluid"
+            src="assets/img/login.svg"
+            width="550px"
+            alt="Login
+          Image"
+          />
+        </div>
+        <div class="col-md-5 mt-3">
+          <div class="card shadow-sm p-3">
+            <div class="card-body">
+              <h4>Admin Area</h4>
+              <p class="text-muted">Akses menjadi admin</p>
+              <form class="mt-4" method="post">
+                <div class="form-group">
+                <?php if (isset($_GET['info'])) { ?>
                     <div class="alert alert-danger text-center" role="alert">
                     <?= $_GET['info'] ?>
                     </div>
                     <?php } ?>
-                        <div class="twice-two">
-                            <input type="text" class="form-control" name="username" placeholder="Masukan Username" required ><br>
-                        </div>
-                        <div class="twice-two">
-                            <input type="Password" class="form-control" name="pass"  placeholder="Masukan Password" required><br>
-                        </div>
-                        <div class="" style="margin-top: -15px;">
-                        <a href="index.php">Back your home page </a><br>
-                        </div>
-                        <button type="submit" class="btn btn-outline-theme pe-4 ps-4 pt-2 mt-2 offset-5" name="submit">Login</button>
-                    </form>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Username"
+                    name="username"
+                    id="username"
+                    autocomplete="off"
+                    required
+                  />
                 </div>
+                <div class="input-group mt-2">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    id="password"
+                    name="pass"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="text-end mt-2">
+                </div>
+                <div class="d-grid gap-2">
+                  <button
+                    class="btn mt-2 btn-color-theme"
+                    type="submit"
+                    name="submit"
+                    id="login"
+                  >
+                   Login
+                  </button>
+                  <p class="text-center">
+                    Back your home page?
+                    <a class="text-theme" href="index.php">Back page</a>
+                  </p>
+                </div>
+              </form>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
           <!-- Login End -->
 <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
