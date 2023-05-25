@@ -108,7 +108,7 @@
                   </button>
                   <p class="text-center">
                     Sudah punya akun?
-                    <a class="text-theme" href="login.php">Login</a>
+                    <a class="text-theme" href="login.php">Sign In</a>
                   </p>
                 </div>
               </form>
