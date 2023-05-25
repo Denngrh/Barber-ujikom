@@ -14,31 +14,22 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shorcut icon" type="image/png" href="assets/img/logo.png" />
     <script src="assets/sciript.js" defer></script>
-    <title>Sign In</title>
+    <title>Forgot Password</title>
 </head>
 <body>
- <!-- Login Start -->
+ <!-- Forgot Start -->
  <div class="container">
       <div class="row">
         <div class="mx-auto mt-5 text-center">
           <img src="assets/img/logo.png" width="8%" alt="Logo Barber" />
         </div>
       </div>
-      <div class="row mt-5">
-        <div class="col-md-7 mt-3">
-          <img
-            class="img-fluid"
-            src="assets/img/signin.svg"
-            width="450px"
-            alt="Login
-          Image"
-          />
-        </div>
+      <div class="row mt-5 justify-content-center d-flex ">
         <div class="col-md-5 mt-md-5">
           <div class="card shadow-sm p-3">
             <div class="card-body">
-              <h4><center>Sign In</center></h4>
-              <form action="../proses/loginProses.php" class="mt-4" method="post">
+              <h4><center>Forgot Password</center></h4>
+              <form action="../proses/ForgotProses.php" class="mt-4" method="post">
                 <div class="form-group">
                 <?php if (isset($_GET['info'])) { ?>
                     <div class="alert alert-danger text-center" role="alert">
@@ -55,39 +46,26 @@
                     type="email"
                     class="form-control"
                     placeholder="Email"
-                    name="email"
-                    id="email"
-                    required
-                  />
-                </div>
-                <div class="input-group mt-2">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Password"
-                    id="password"
-                    name="password"
-                    autocomplete="off"
+                    name="mail"
+                    id="mail"
                     required
                   />
                 </div>
                 <div class="text-end mt-2">
                 </div>
-                <a class="text-theme" href="forgot.php">Forgot Password?</a>
                 <div class="d-grid gap-2">
                   <button
                     class="btn mt-2 btn-color-theme"
                     type="submit"
-                    name="submit"
-                    id="login"
+                    name="reset"
+                    id="reset"
                   >
-                   Login
+                   Reset Password
                   </button>
-                  <p class="text-center">
-                 Belum punya akun?
-                    <a class="text-theme" href="register.php">Sign Up</a>
+                  <p class="">
+                Back to
+                    <a class="text-theme" href="login.php">login?</a>
                   </p>
-                    <a class="text-theme text-center" href="../index.php">Back to Home</a>
                 </div>
               </form>
             </div>
@@ -95,14 +73,13 @@
         </div>
       </div>
     </div>
-          <!-- Login End -->
+          <!-- Forgot End -->
 <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/feather-icons"></script>
-
     <script>
       feather.replace();
     </script>
