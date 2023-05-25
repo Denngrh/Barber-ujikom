@@ -64,8 +64,7 @@
         <div class="col-md-5 mt-3">
           <div class="card shadow-sm p-3">
             <div class="card-body">
-              <h4>Admin Area</h4>
-              <p class="text-muted">Akses menjadi admin</p>
+              <h4><center>Admin Area</center></h4>
               <form class="mt-4" method="post">
                 <div class="form-group">
                 <?php if (isset($_GET['info'])) { ?>
