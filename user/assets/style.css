@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Scroll */
+.go-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border: 3px solid #333;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-top-btn img {
+  width: 40px;
+  height: 40px;
+}
+/* END Scroll */
+
+/*gerak */
+#typing {
+  width: 0ch;
+  color: #b4846c;
+  float: left;
+  font-family: sans-serif;
+  font-weight:bold;
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 8s steps(22) 1s infinite alternate;
+  }
+  @keyframes typing {
+  from {
+  width: 0ch;
+  }
+  to {
+  width: 25ch;
+  }
+  }
+  @keyframes crow {
+  from {
+  opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+  }
+  /* end gerak */
+
+.btn-color-theme {
+  background-color: #7d5a50;
+  color: white !important;
+  border-color: #7d5a50;
+}
+
+.text-theme {
+  color: #7d5a50;
+}
+
+a:hover {
+  color: #7d5a50;
+}
+
+.btn-color-theme:hover {
+  background-color: #462a28;
+  color: white !important;
+  border-color: #462a28;
+}
+
+.card {
+  border-radius: 12px;
+}
+#display-pass {
+  display: none;
+}
+#display-passConfirm {
+  display: none;
+}
+
+.btn-outline-theme {
+  border: 1px solid #7d5a50;
+  color: black !important;
+}
+
+.btn-outline-theme:hover {
+  background-color: #56413b;
+  color: white !important;
+  border-color: #7d5a50;
+}
+
+.navbar-nav li {
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.text-orange {
+  color: #b4846c;
+}
+
+.badge-muter {
+  color: #6f6f6f;
+  background-color: #f9f6ff;
+}
+
+.badge {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.border-radius-10 {
+  border-radius: 15px;
+}
+
+.price-theme {
+  color: #c36a2d;
+}
+
+.img-fluid {
+  min-width: 70px;
+}
+
+@media (max-width: 576px) {
+  .img-fluid {
+    width: 100%;
+    max-height: 300px;
+  }
+  .footer {
+    text-align: center;
+  }
+}
+
+.footer {
+  margin-top: 50px !important;
+}
