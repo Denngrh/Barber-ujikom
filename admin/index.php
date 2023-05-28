@@ -154,7 +154,25 @@
         </ul>
       </li>
       <!-- End pages Nav -->
-      
+
+      <!--  customer Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="customer-list.php">
+          <i class="bi bi-card-list"></i>
+          <span>Customer List</span>
+        </a>
+      </li>
+      <!-- End customer  Nav -->
+
+       <!--  invoices  Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="invoices.php">
+          <i class="bi bi-envelope"></i>
+          <span>Invoices</span>
+        </a>
+      </li>
+      <!-- End invoices  Nav -->
+
        <!--  Settings  -->
       <li class="nav-heading">Settings</li>
       <li class="nav-item">
@@ -224,6 +242,68 @@
                   ?>
                       </h6>
                       <span class="text-success small pt-1 fw-bold">Total Layanan</span> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End model Card -->
+
+             <!-- model Card -->
+             <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Customer <span>| Service</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class='bx bxs-user bx-tada' style='color:#4153f1'></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>
+                      <?php
+                  $sql = mysqli_query($conn, "SELECT * FROM users");
+                  $data = mysqli_num_rows($sql); 
+                  echo $data;
+                  ?>
+                      </h6>
+                      <span class="text-success small pt-1 fw-bold">Total Customer</span> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End model Card -->
+            
+            <!-- model Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Total <span>| Sales</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class='bx bx-money bx-tada' style='color:#4153f1' ></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>
+                      <?php
+ $query9=mysqli_query($conn,"select tblinvoice.ServiceId as ServiceId, tblservices.Cost
+ from tblinvoice 
+  join tblservices  on tblservices.ID=tblinvoice.ServiceId");
+while($data=mysqli_fetch_array($query9))
+{
+$total_sale=$dat['Cost'];
+$totalsale+=$total_sale;
+}
+?>
+<?php
+if($totalsale==""):
+		echo "0";
+else:
+	echo $totalsale;
+endif;
+						?>K
+                      </h6>
+                      <span class="text-success small pt-1 fw-bold">Total Sales</span> 
                     </div>
                   </div>
                 </div>

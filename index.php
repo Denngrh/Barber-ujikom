@@ -54,7 +54,7 @@ include('inc/koneksi.php');
             <a
               href="user/login.php"
               class="btn btn-outline-theme pe-4 ps-4 pt-2 mt-3"
-              >Get Appointment
+              >Get Invoices
             </a>
           </div>
           <div class="col-md-6 mt-2">
@@ -198,12 +198,12 @@ include('inc/koneksi.php');
                     <h2 class="accordion-header" id="flush-headingTwo">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                         <p>
-                          Apakah kita bisa langsung ketempat tanpa booking?
+                         Apakah kita bisa melihat riwayat pembayaran?
                         </p>
                       </button>
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Tentu saja Lily putra barbershop bisa langsung ke tempat tanpa harus booking, tetapi cenderung menunggu dengan yang lain,untuk efisiensi waktu sebaiknya booking terlebih dahulu.</div>
+                      <div class="accordion-body">Tentu saja Lily putra barbershop bisa melihat riwayat pembayaran dengan cara login terlebih dahulu ke Get invoices</div>
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -219,11 +219,6 @@ include('inc/koneksi.php');
                     </div>
                   </div>
                 </div>
-                <a
-              href="https://scribehow.com/shared/Cara_Menavigasi_Situs_Web_untuk_Lily_Putra_Barbershop__xN6gZKy8T0ucjvPY35BXDQ"
-              class="btn btn-outline-theme pe-4 ps-4 pt-2 mt-3"
-              >Panduan pengguna
-            </a>
             </div>
             <div class="col-md-6">
               <img src="assets/img/aboutBarber 2.svg" width="600px" class="img-fluid"alt="About Image">

@@ -1,46 +1,24 @@
 <?php 
-include 'inc/koneksi.php';
-      error_reporting(0);
+         include'inc/koneksi.php';
         session_start();
+        error_reporting(0);
         if($_SESSION['status']!="login"){
             header("Location: ../login.php?info=Login Terlebih Dahulu!");
-        } else{
-if(isset($_POST['submit']))
-  {
-    $sername=$_POST['sername'];
-    $serdesc=$_POST['serdesc'];
-    $cost=$_POST['cost'];
-   $image=$_POST['image'];
-$image=$_FILES["image"]["name"];
-$extension = substr($image,strlen($image)-4,strlen($image));
-$allowed_extensions = array(".jpg","jpeg",".png",".gif");
-if(!in_array($extension,$allowed_extensions))
-{
-echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
-}
-else
-{
-//enkripsi nama gambar
-$newimage=md5($image).time().$extension;
-// menyimpan di folder img
-move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage); 
-    $query=mysqli_query($conn, "INSERT INTO  tblservices(ServiceName,ServiceDescription,Cost,Image) value('$sername','$serdesc','$cost','$newimage')");
-    if ($query) {
-      header("Location: add-service.php?info=berhasil menambahkan");
-  }
-  else
-    {
-      header("Location: add-service.php?info=Something Went Wrong. Please try again.");	
-     }
-}
-}
+        }else{
+
+            if($_GET['delid']){
+            $sid=$_GET['delid'];
+            mysqli_query($conn,"delete from users where id ='$sid'");
+            echo "<script>alert('Data Dihapus');</script>";
+            echo "<script>window.location.href='customer-list.php'</script>";
+                      } 
     ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Add service</title>
+  <title>Customer Service</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
@@ -56,7 +34,7 @@ move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage);
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-   <!-- ======= Header ======= -->
+         <!-- ======= Header ======= -->
     <!-- Logo -->
 <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="d-flex align-items-center justify-content-between">
@@ -131,6 +109,7 @@ move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage);
   </header>
   <!-- End Header -->
 
+  
           <!-- ======= Sidebar ======= -->
     <!--Dashboard -->
   <aside id="sidebar" class="sidebar">
@@ -150,21 +129,21 @@ move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage);
         </a>
         <ul id="service-nav" class="nav-content collapse " data-bs-parent="#service-nav">
           <li>
-            <a class="nav-link" href="add-service.php">
+            <a href="add-service.php">
               <i class="bi bi-circle"></i><span>Add Service</span>
             </a>
           </li>
           <li>
-            <a class="nav-link collapsed" href="manage-service.php">
-              <i class="bi bi-circle"></i><span>Manage Service</span>
+            <a href="manage-service.php">
+              <i class="bi bi-circle active"></i><span>Manage Service</span>
             </a>
           </li>
         </ul>
       </li>
       <!-- End Service  -->
 
-     <!--  Pages  -->
-     <li class="nav-item">
+      <!--  Pages  -->
+      <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#pages-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Pages</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -182,10 +161,10 @@ move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage);
         </ul>
       </li>
       <!-- End pages Nav -->
-      
-       <!--  customer Nav -->
-       <li class="nav-item">
-        <a class="nav-link collapsed" href="customer-list.php">
+
+        <!--  customer Nav -->
+        <li class="nav-item"  >
+        <a class="nav-link" href="customer-list.php">
           <i class="bi bi-card-list"></i>
           <span>Customer List</span>
         </a>
@@ -193,8 +172,8 @@ move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage);
       <!-- End customer  Nav -->
 
        <!--  invoices  Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="invoices.php">
+       <li class="nav-item">
+        <a class="nav-link collapsed"href="invoices.php">
           <i class="bi bi-envelope"></i>
           <span>Invoices</span>
         </a>
@@ -234,38 +213,58 @@ move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage);
   </aside>
   <!-- End Sidebar-->
 
-    <main id="main" class="main">
+        <!--  Page Title -->
+  <main id="main" class="main">
     <div class="pagetitle">
-      <h1>Add Service</h1>
+      <h1>Customer Service</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Add Service</li>
+          <li class="breadcrumb-item active">Customer Service</li>
         </ol>
       </nav>
-    </div><!-- End Page Title -->
-
-    <section class="section">
-      <div class="row">
-        <div class="col-lg-6">
-        <form method="post" enctype="multipart/form-data">
-        <?php if (isset($_GET['info'])) { ?>
-                    <div class="alert alert-primary text-center" role="alert">
-                    <?= $_GET['info'] ?>
-                    </div>
-                    <?php } ?>
-							 <div class="form-group"> <label for="exampleInputEmail1">Service Name</label> <input type="text" class="form-control mt-1" id="sername" name="sername" placeholder="Service Name" value="" required="true"> </div>
-							 <div class="form-group mt-2"> <label for="exampleInputEmail1">Service Description</label> <textarea type="text" class="form-control mt-1" id="sername" name="serdesc" placeholder="Service Name" value="" required="true"></textarea> </div>
-							  <div class="form-group mt-2"> <label for="exampleInputPassword1">Cost</label> <input type="text" id="cost" name="cost" class="form-control mt-1" placeholder="Cost" value="" required="true"> </div>
-							<div class="form-group mt-2"> <label for="exampleInputEmail1">Images</label> <input type="file" class="form-control mt-1" id="image" name="image" value="" required="true"> </div>
-							  <button type="submit" name="submit" class="btn btn-primary mt-2">Add</button>
-                    </form> 
-        </div>
-      </div>
-    </section>
+    </div>
+    <!-- End Page Title -->
+    <div id="page-wrapper">
+			<div class="main-page">
+				<div class="tables">
+        <div class="table-responsive bs-example widget-shadow">
+						<table class="table table-bordered mt-3">
+                        <thead>
+                             <tr>
+                                 <th>#</th> 
+                                 <th>Name</th>
+                                  <th>Mobile Number</th>
+                                  <th>Email</th>
+                                   <th>RegistrationDate</th>
+                                   <th>Action</th>
+                                 </tr>
+                                 </thead>
+                                  <tbody>
+                                    <?php
+                                    $ret=mysqli_query($conn,"select *from  users");
+                                    $cnt=1;
+                                    while ($row=mysqli_fetch_array($ret)) {
+                                    ?>
+						         <tr> 
+                            <th scope="row"><?php echo $cnt;?></th> 
+                            <td><?php  echo $row['nama'];?></td>
+                             <td><?php  echo $row['number'];?></td>
+                             <td><?php  echo $row['email'];?></td>
+                             <td><?php  echo $row['RegDate'];?></td> 
+						 	<td> <a href="add-customer.php?addid=<?php echo $row['id'];?>" class="btn btn-primary">Assign Services</a>
+                            <a href="customer-list.php?delid=<?php echo $row['id'];?>" class="btn btn-danger" onClick="return confirm('Are you sure you want to delete?')">Delete</a>
+						 		</td>
+                                 </tr>  
+                                  <?php 
+                                $cnt=$cnt+1;
+                                }?></tbody> 
+                                </table> 
+					</div>
+				</div>
+			</div>
+		</div>
   </main>
-  <!-- End #main -->
-
          <!-- Footer -->
       <?php include'inc/footer.php'; ?>
         <!-- Footer end -->
@@ -275,4 +274,4 @@ move_uploaded_file($_FILES["image"]["tmp_name"],"assets/img/".$newimage);
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 </html>
-<?php } ?>
+<?php }  ?>
