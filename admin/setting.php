@@ -182,6 +182,24 @@
         </ul>
       </li>
       <!-- End pages Nav -->
+
+       <!--  customer Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="customer-list.php">
+          <i class="bi bi-card-list"></i>
+          <span>Customer List</span>
+        </a>
+      </li>
+      <!-- End customer  Nav -->
+
+       <!--  invoices  Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="invoices.php">
+          <i class="bi bi-envelope"></i>
+          <span>Invoices</span>
+        </a>
+      </li>
+      <!-- End invoices  Nav -->
       
       <!--  Settings  -->
       <li class="nav-heading">Settings</li>

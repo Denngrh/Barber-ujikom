@@ -161,6 +161,24 @@ echo "<script>window.location.href='manage-service.php'</script>";
       </li>
       <!-- End pages Nav -->
       
+       <!--  customer Nav -->
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="customer-list.php">
+          <i class="bi bi-card-list"></i>
+          <span>Customer List</span>
+        </a>
+      </li>
+      <!-- End customer  Nav -->
+
+       <!--  invoices  Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="invoices.php">
+          <i class="bi bi-envelope"></i>
+          <span>Invoices</span>
+        </a>
+      </li>
+      <!-- End invoices  Nav -->
+      
       <!--  Settings  -->
       <li class="nav-heading">Settings</li>
       <li class="nav-item">
@@ -229,7 +247,7 @@ echo "<script>window.location.href='manage-service.php'</script>";
 						 <tr>
                <th scope="row"><?php echo $cnt;?></th> 
                <td><?php  echo $row['ServiceName'];?></td>
-                <td><?php  echo $row['Cost'];?></td>
+                <td><?php  echo $row['Cost'];?>K</td>
                 <td><?php  echo $row['CreationDate'];?></td>
                  <td style="width:150px;">
 						 	<a href="edit-service.php?editid=<?php echo $row['ID'];?>" class="btn btn-primary">Edit</a>	 	
