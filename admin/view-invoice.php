@@ -1,17 +1,17 @@
 <?php 
-        error_reporting(0);
-        include('inc/koneksi.php');
+         include'inc/koneksi.php';
         session_start();
+        error_reporting(0);
         if($_SESSION['status']!="login"){
             header("Location: ../login.php?info=Login Terlebih Dahulu!");
-        }
+        }else{ 
     ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Dashboard - Admin Area</title>
+  <title>View Invoice</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
@@ -27,7 +27,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-  <!-- ======= Header ======= -->
+         <!-- ======= Header ======= -->
     <!-- Logo -->
 <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="d-flex align-items-center justify-content-between">
@@ -102,13 +102,13 @@
   </header>
   <!-- End Header -->
 
-
-      <!-- ======= Sidebar ======= -->
+  
+          <!-- ======= Sidebar ======= -->
     <!--Dashboard -->
   <aside id="sidebar" class="sidebar">
     <ul class="sidebar-nav" id="sidebar-nav">
       <li class="nav-item">
-        <a class="nav-link  " href="index.php">
+        <a class="nav-link collapsed" href="index.php">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>   
         </a>
@@ -135,7 +135,7 @@
       </li>
       <!-- End Service  -->
 
-       <!--  Pages  -->
+      <!--  Pages  -->
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#pages-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Pages</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -148,15 +148,15 @@
           </li>
           <li>
             <a href="location.php">
-              <i class="bi bi-circle"></i><span>Location</span>
+              <i class="bi bi-circle active"></i><span>Location</span>
             </a>
           </li>
         </ul>
       </li>
       <!-- End pages Nav -->
 
-      <!--  customer Nav -->
-      <li class="nav-item">
+        <!--  customer Nav -->
+        <li class="nav-item"  >
         <a class="nav-link collapsed" href="customer-list.php">
           <i class="bi bi-card-list"></i>
           <span>Customer List</span>
@@ -165,15 +165,15 @@
       <!-- End customer  Nav -->
 
        <!--  invoices  Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="invoices.php">
+       <li class="nav-item">
+        <a class="nav-link"href="invoices.php">
           <i class="bi bi-envelope"></i>
           <span>Invoices</span>
         </a>
       </li>
       <!-- End invoices  Nav -->
-
-       <!--  Settings  -->
+      
+      <!--  Settings  -->
       <li class="nav-heading">Settings</li>
       <li class="nav-item">
 
@@ -203,81 +203,96 @@
       </li>
       <!-- End Blank -->
     </ul>
-    <!-- End setting-->
   </aside>
   <!-- End Sidebar-->
 
+        <!--  Page Title -->
   <main id="main" class="main">
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Invoice Details</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item active">Invoice-Details</li>
         </ol>
       </nav>
-    </div><!-- End Page Title -->
-
-    <section class="section dashboard">
-      <div class="row">
-
-        <!-- Left side columns -->
-        <div class="col-lg-8">
-          <div class="row">
-            <!-- model Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-                <div class="card-body">
-                  <h5 class="card-title">Hair <span>| Model</span></h5>
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                    <i class='bx bx-knife bx-flip-horizontal bx-tada' style='color:#4153f1' ></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>
-                      <?php
-                  $sql = mysqli_query($conn, "SELECT * FROM tblservices");
-                  $data = mysqli_num_rows($sql); 
-                  echo $data;
-                  ?>
-                      </h6>
-                      <span class="text-success small pt-1 fw-bold">Total Layanan</span> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End model Card -->
-
-             <!-- model Card -->
-             <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-                <div class="card-body">
-                  <h5 class="card-title">Customer <span>| Service</span></h5>
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                    <i class='bx bxs-user bx-tada' style='color:#4153f1'></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>
-                      <?php
-                  $sql = mysqli_query($conn, "SELECT * FROM users");
-                  $data = mysqli_num_rows($sql); 
-                  echo $data;
-                  ?>
-                      </h6>
-                      <span class="text-success small pt-1 fw-bold">Total Customer</span> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End model Card -->
-      </div>
-    </section>
+    </div>
+    <!-- End Page Title -->
+    <div id="page-wrapper">
+			<div class="main-page">
+				<div class="tables" id="exampl">
+        <div class="table-responsive bs-example widget-shadow">
+						<table class="table table-bordered mt-3">
+                        <?php
+                    $invid=intval($_GET['invoiceid']);
+                $ret=mysqli_query($conn,"select DISTINCT  date(tblinvoice.PostingDate) as invoicedate,users.nama,users.email,users.number,users.RegDate
+                    from  tblinvoice 
+                    join users on users.id=tblinvoice.Userid 
+                    where tblinvoice.BillingId='$invid'");
+                $cnt=1;
+                while ($row=mysqli_fetch_array($ret)) {
+                ?>				
+					<div class="table-responsive bs-example widget-shadow">
+						<h4>Invoice #<?php echo $invid;?></h4>
+						<table class="table table-bordered" width="100%" border="1"> 
+                            <tr>
+                            <th colspan="6">Customer Details</th>	
+                            </tr>
+                                       <tr> 
+								<th>Name</th> 
+								<td><?php echo $row['nama']?></td> 
+								<th>Contact no.</th> 
+								<td><?php echo $row['number']?></td>
+								<th>Email </th> 
+								<td><?php echo $row['email']?></td>
+							</tr> 
+							 <tr> 
+								<th>Registration Date</th> 
+								<td><?php echo $row['RegDate']?></td> 
+								<th>Invoice Date</th> 
+								<td colspan="3"><?php echo $row['invoicedate']?></td> 
+							</tr> 
+                                    <?php }?>
+                                    </table> 
+                                    <table class="table table-bordered" width="100%" border="1"> 
+                                    <tr>
+                                    <th colspan="3">Services Details</th>	
+                                    </tr>
+                                    <tr>
+                                    <th>#</th>	
+                                    <th>Service</th>
+                                    <th>Cost</th>
+                                    </tr>
+                                    <?php
+                                    $ret=mysqli_query($conn,"select tblservices.ServiceName,tblservices.Cost  
+                                        from  tblinvoice 
+                                        join tblservices on tblservices.ID=tblinvoice.ServiceId 
+                                        where tblinvoice.BillingId='$invid'");
+                                    $cnt=1;
+                                    while ($row=mysqli_fetch_array($ret)) {
+                                        ?>
+                                    <tr>
+                                    <th><?php echo $cnt;?></th>
+                                    <td><?php echo $row['ServiceName']?></td>	
+                                    <td><?php echo $subtotal=$row['Cost']?>K</td>
+                                    </tr>
+                                    <?php 
+                                    $cnt=$cnt+1;
+                                    $gtotal+=$subtotal;
+                                    } ?>
+                                    <tr>
+                                    <th colspan="2" style="text-align:center">Grand Total</th>
+                                    <th><?php echo $gtotal?>K</th>	
+                                    </tr>
+                                    </table>
+                                    <p style="margin-top:1%"  align="center">
+                                    <i class="fa fa-print fa-2x" style="cursor: pointer;"  OnClick="CallPrint(this.value)" ></i>
+                                    </p>
+					</div>
+				</div>
+			</div>
+		</div>
   </main>
-  <!-- End #main -->
-
          <!-- Footer -->
       <?php include'inc/footer.php'; ?>
         <!-- Footer end -->
@@ -286,4 +301,7 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+    <!-- Template cdn fontawesome -->
+  <script src="https://kit.fontawesome.com/6acd0a1998.js" crossorigin="anonymous"></script>
 </html>
+<?php }  ?>
