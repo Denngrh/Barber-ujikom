@@ -26,44 +26,31 @@
             </li>
             <li class="nav-item">
               <a
-                href="#service"
-                class="nav-link btn btn-outline-theme ps-3 pe-3"
-                >Daftar layanan</a 
-              >
-            </li>
-            <li class="nav-item">
-              <a
                 href="#contact"
                 class="nav-link btn btn-outline-theme ps-3 pe-3"
-                >Kontak</a
+                >kontak</a 
               >
             </li>
             <li class="nav-item">
               <a
-                href="#faq"
+                href="#invoices"
                 class="nav-link btn btn-outline-theme ps-3 pe-3"
-                >FAQ</a
+                >Invoices History</a
               >
             </li>
             <li class="nav-item">
               <a
-                href="#location"
+                href="#profile"
                 class="nav-link btn btn-outline-theme ps-3 pe-3"
-                >Lokasi</a
+                >Profile</a
               >
             </li>
             <li class="nav-item">
               <a
-                href="#about"
-                class="nav-link btn btn-outline-theme ps-3 pe-3"
-                >Tentang kami</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="./login.php"
+                onClick="return confirm('Kamu yakin untuk logout?')"
+                href="logout.php"
                 class="nav-link btn btn-color-theme ps-3 pe-3"
-                >Admin</a
+                >Logout</a
               >
             </li>
           </div>
