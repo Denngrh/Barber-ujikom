@@ -105,8 +105,7 @@
                    Login
                   </button>
                   <p class="text-center">
-                    Back your home page?
-                    <a class="text-theme" href="index.php">Back page</a>
+                  <a class="text-theme text-center" href="index.php">Back to Home</a>
                   </p>
                 </div>
               </form>
@@ -122,7 +121,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/feather-icons"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
     <script>
       feather.replace();
     </script>
