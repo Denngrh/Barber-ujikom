@@ -15,6 +15,7 @@
                 session_start();
                 $_SESSION['isLogin'] = true;
                 $_SESSION['user'] = $user;
+                $_SESSION['id'] = $user['id'];
                 header("location: ../user/index.php");
             }else {
                 header("Location: ../user/login.php?info=VERIF EMAIL DULU GANN!!");

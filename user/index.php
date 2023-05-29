@@ -2,6 +2,7 @@
 session_start();
 error_reporting(0);
 include('inc/koneksi.php');
+session_start();
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -115,7 +116,7 @@ include('inc/koneksi.php');
 							</thead> <tbody>
                         <?php
                         $ret=mysqli_query($conn,"SELECT distinct users.nama,users.number,tblinvoice.BillingId,date(tblinvoice.PostingDate) as invoicedate from  users   
-                            join tblinvoice on users.id=tblinvoice.Userid  order by tblinvoice.ID desc");
+                            join tblinvoice on users.id=tblinvoice.Userid where users.id ='$_SESSION[id]' order by tblinvoice.ID desc");
                         $cnt=1;
                         while ($row=mysqli_fetch_array($ret)) {
                         ?>
@@ -155,7 +156,7 @@ include('inc/koneksi.php');
             <div class="map-content-9 mt-lg-0 mt-4">
                     <form action="update-profile.php"method="post">
                     <?php
-                                    $ret=mysqli_query($conn,"select *from  users");
+                                    $ret=mysqli_query($conn,"select *from  users where users.id ='$_SESSION[id]'");
                                     $cnt=1;
                                     while ($row=mysqli_fetch_array($ret)) {
                                     ?>
