@@ -1,7 +1,15 @@
 <p align="center">
   <img src="https://github.com/Denngrh/Barber-ujikom/assets/112230212/83986cfc-2397-42fd-9626-06a9df793476" alt="Logo-Barber" style="width: 100px;">
 </p>
-
+   <div align="center">
+    <table>
+        <th><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/Denngrh/Barber-ujikom"></th>
+        <th><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Denngrh/Barber-ujikom"></th>
+        <th><img alt="GitHub" src="https://img.shields.io/github/license/Denngrh/Barber-ujikom"></th>
+        <th><img src="https://img.shields.io/badge/Programing%20Language-php-blue" alt="programing"></th>
+    </table>
+   </div>
+   
 ##  :beginner: About
 Website Pangkas rambut lily putra Adalah Website Yang Digunakan Untuk membantu mencari tempat mencukur yang pas, awal tujuaanya unuk memunculkan di google maps yang telah dikembangkan dengan banyaknya fitur-fitur.
 
