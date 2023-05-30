@@ -76,6 +76,8 @@ Lihat panduan instalasi source code aplikasi sistem pangkas rambut dibawah ini
 - rincian login Admin = <br>
  -> Username : admin 
   -> password : 200512
+- rincian login User = <br>
+ ->Register terlebih dahulu
 		
 ##  :lock: License
 [MIT license](https://opensource.org/licenses/MIT)
