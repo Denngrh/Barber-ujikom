@@ -26,6 +26,7 @@ Website Pangkas rambut lily putra Adalah Website Yang Digunakan Untuk membantu m
     - Invoices History (print)
     - Update Profile
 - Login-Regist-Verif
+- booking (proses)
 
 ##  :file_folder: File Structure
 ```
